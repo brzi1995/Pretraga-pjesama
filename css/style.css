@@ -1,0 +1,35 @@
+.fade {
+    opacity: 0;
+    animation: visible 2s ease-in 2s forwards;
+}
+
+@keyframes visible {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.shapes {
+    width: 100px;
+    height: 100px;
+    color: #da1b43;
+    margin: auto;
+    background: conic-gradient(from  -45deg at top    35.2px left 50% ,#0000 ,currentColor 1deg 90deg,#0000 91deg),
+           conic-gradient(from   45deg at right  35.2px top  50% ,#0000 ,currentColor 1deg 90deg,#0000 91deg),
+           conic-gradient(from  135deg at bottom 35.2px left 50% ,#0000 ,currentColor 1deg 90deg,#0000 91deg),
+           conic-gradient(from -135deg at left   35.2px top  50% ,#0000 ,currentColor 1deg 90deg,#0000 91deg);
+    animation: shapes 2.5s ease-in forwards;
+ }
+ 
+ @keyframes shapes {
+    50% {
+       width: 100px;
+       height: 100px;
+       transform: rotate(180deg);
+    }
+ 
+    100% {
+       transform: rotate(360deg) ;
+       visibility: hidden;
+    }
+   
+ }
